@@ -13,7 +13,7 @@
     <section class="section section--question">
         <h1 class="heading">Ask me anything...</h1>
         <div class="input-group">
-            <input class="blue" onkeydown="enter(event, submit)" type="text" placeholder="Your Question">
+            <input class="blue" id="inputQuestion" type="text" placeholder="Your Question">
             <button class="blue" id="submitQuestion">Ask</button>
         </div>
     </section>
@@ -24,10 +24,10 @@
         </h2>
         <div class="list"></div>
         <div class="input-group">
-            <input onkeydown="enter(event, addOption)" type="text" placeholder="Custom option">
+            <input id="inputOption" type="text" placeholder="Custom option">
             <button id="addOption">Add</button>
             <span>or</span>
-            <button if="setDefaultOptions">Default</button>
+            <button id="setDefaultOptions">Default</button>
         </div>
     </section>
 

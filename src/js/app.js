@@ -32,7 +32,7 @@ const optionsList = document.querySelector('.section--options .list');
 optionsList.innerHTML = 'Default options'
 
 // Set Default Option
-function setDefaultOptions(button) {
+function setDefaultOptions() {
     if (isDefault) {
         alert('Already set on default');
 
@@ -40,7 +40,6 @@ function setDefaultOptions(button) {
         options = defaultOptions;
         isDefault = true;
         optionsList.innerHTML = 'Default options';
-        button.style.backgroundColor = ''
     }
 }
 
@@ -126,21 +125,26 @@ function clearHistory() {
     }
 }
 
-// Click on Enter
-function enter(e, f) {
-    if ((window.event ? event.keyCode : e.which) == 13) {
-        e.preventDefault();
-        f();
-    }
-}
+// ***********************************************************
+// ***********************************************************
 
 // Buttons
-
 document.getElementById('submitQuestion').addEventListener('click', submitQuestion);
 document.getElementById('addOption').addEventListener('click', addOption);
-document.getElementById('setDefaultOptions').addEventListener('click', setDefaultOptions(this));
+document.getElementById('setDefaultOptions').addEventListener('click', setDefaultOptions);
 document.getElementById('clearHistory').addEventListener('click', clearHistory);
-
 document.getElementById('hideAnswer').addEventListener('click', hideAnswer);
-// ***********************************************************
-// ***********************************************************
+
+// Input
+document.getElementById("inputQuestion").addEventListener("keyup", function (event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        submitQuestion();
+    }
+});
+document.getElementById("inputOption").addEventListener("keyup", function (event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        addOption();
+    }
+});
