@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randomizer</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./css/main.min.css">
+    
+</head>
+<body>
+    <section class="section section--question">
+        <h1 class="heading">Ask me anything...</h1>
+        <div class="input-group">
+            <input class="blue" onkeydown="enter(event, submit)" type="text" placeholder="Your Question">
+            <button class="blue" id="submitQuestion">Ask</button>
+        </div>
+    </section>
+
+    <section class="section section--options">
+        <h2 class="heading">
+            <span>Answer options</span>
+        </h2>
+        <div class="list"></div>
+        <div class="input-group">
+            <input onkeydown="enter(event, addOption)" type="text" placeholder="Custom option">
+            <button id="addOption">Add</button>
+            <span>or</span>
+            <button if="setDefaultOptions">Default</button>
+        </div>
+    </section>
+
+    <section class="section section--history">
+        <h2 class="heading">
+            <span>History</span>
+            <button id="clearHistory">Clear</button>
+        </h2>
+        <div class="list"></div>
+    </section>
+
+    <div class="modal modal--answer" style="display: none;">
+        <div class="question"></div>
+        <div class="answer"></div>
+        <button id="hideAnswer">OK</button>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="./js/app.min.js"></script>
+
+</body>
+</html>
