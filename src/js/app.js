@@ -23,7 +23,6 @@ let defaultOptions = [
 ];
 
 let options = defaultOptions;
-let isDefault = true;
 
 let newOptions = [];
 
@@ -33,12 +32,12 @@ optionsList.innerHTML = 'Default options'
 
 // Set Default Option
 function setDefaultOptions() {
-    if (isDefault) {
+    if (options == defaultOptions) {
         alert('Already set on default');
 
     } else {
         options = defaultOptions;
-        isDefault = true;
+        newOptions = [];
         optionsList.innerHTML = 'Default options';
     }
 }
@@ -50,16 +49,14 @@ function addOption() {
 
     } else {
         newOptions.push(optionsInput.value);
+        options = newOptions;
 
         if (optionsList.innerHTML == 'Default options') {
             optionsList.innerHTML = optionsInput.value
         } else {
             optionsList.innerHTML = optionsList.innerHTML + ' - ' + optionsInput.value
         }
-
-        options = newOptions;
-        isDefault = false;
-
+        
         // Clear Input
         optionsInput.value = '';
     }
