@@ -9,4 +9,4 @@ gulp default  // Production
 gulp watch    // Development
 ```
 
-<a href="https://dothar.github.io/randomizer-site/" target="_blank">Demo</a>
+<a href="https://dothar.github.io/randomizer-site/" target="_blank">👉 Go to website</a>
