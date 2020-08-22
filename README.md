@@ -1,7 +1,12 @@
-<a href="https://dothar.github.io/randomizer-site/" target="_blank">Demo</a>
+## First step
+```
+npm install
+```
 
 ## Tasks
 ```
-gulp default
-gulp watch 
+gulp default  // Production
+gulp watch    // Development
 ```
+
+<a href="https://dothar.github.io/randomizer-site/" target="_blank">Demo</a>
